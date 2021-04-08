@@ -1,0 +1,138 @@
+@import 'themes/dark.css';
+
+@keyframes animation-1 {
+    0%   {background: var(--header-color);}
+    100% {background: var(--menu-color);}
+  }
+
+  @keyframes animation-2 {
+    0%   {background: var(--menu-color);}
+    100% {background: var(--main-color);}
+  }
+
+  @keyframes animation-3 {
+    0%   {background: var(--main-color);}
+    100% {background: var(--right-color);}
+  }
+
+  @keyframes animation-4 {
+    0%   {background: var(--right-color);}
+    100% {background: var(--footer-color);}
+  }
+
+  @keyframes animation-5 {
+    0%   {background: var(--footer-color);}
+    100% {background: var(--header-color);}
+  }
+
+body {
+    margin-left: 450px;
+    margin-top: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.header {
+    background-color: var(--header-color);
+    height: 10rem;
+    width: 55rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: animation-1 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.menu {
+    background-color: var(--menu-color);
+    width: 10rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: animation-2 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.main {
+    background-color: var(--main-color);
+    width: 25rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: animation-3 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.right {
+    background-color: var(--right-color);
+    width: 20rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: animation-4 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.footer {
+    background-color: var(--footer-color);
+    width: 45rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 610px;
+    top: 428px;
+    position: absolute;
+    animation: animation-5 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.item1 { grid-area: header;
+    background-color: var(--header-color);
+    animation: animation-1 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+.item2 { grid-area: menu;
+    background-color: var(--menu-color);
+    animation: animation-2 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+ }
+.item3 { grid-area: main;
+    background-color: var(--main-color);
+    animation: animation-3 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+ }
+.item4 { grid-area: right;
+    background-color: var(--right-color);
+    animation: animation-4 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+ }
+.item5 { grid-area: footer;
+    background-color: var(--footer-color);
+    animation: animation-5 3s infinite alternate;
+    animation-timing-function: ease-in-out;
+ }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  width: 55rem;
+  height: 30rem;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+  }
